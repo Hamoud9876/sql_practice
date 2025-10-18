@@ -130,7 +130,7 @@ HAVING Count(*) = 1
 SELECT Product_Category,
 AVG(Shipping_Cost) avg_shipping_cost,
 AVG(Profit) as avg_profit,
-(Profit / Shipping_Cost) as profit_Shipping_ratio
+SUM(Profit) / SUM(Shipping_Cost) as profit_Shipping_ratio
 from sales
 GROUP BY Product_Category;
 
